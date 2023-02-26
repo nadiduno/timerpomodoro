@@ -15,7 +15,7 @@ Linguagem TypeScript como base.
 <div>
   <img 
     alt="Timer Pomodoro"
-    src="https://github.com/nadiduno/timerpomodor/blob/main/.github/ProjectNadiDunoDesenvolvedorFrontEnd.png" 
+    src="https://github.com/nadiduno/timerpomodoro/blob/main/.github/ProjectNadiDunoDesenvolvedorFrontEnd.png" 
     width="100%"
   >
   <br />
@@ -37,14 +37,15 @@ $ npm i
 # Run the developer
 $ npm run dev
 ```
-By DevRel <💜 /> [Nadi Duno](https://www.linkedin.com/in/nadiduno/) © 2023
 
 ### No BootCamp
 
-[Rocketseat](https://www.rocketseat.com.br/) | Design [Figma](https://www.figma.com/file/FnCX310DgPWQBwrNtGb4X1/Ignite-Timer-(Community)?node-id=313%3A1874&t=i9oqxtMKrJxTi29V-0)
+[Rocketseat](https://www.rocketseat.com.br/) | Design [Figma](https://www.figma.com/file/FnCX310DgPWQBwrNtGb4X1/Ignite-Timer-(Community)?node-id=313%3A1874&t=i9oqxtMKrJxTi29V-0) [Daniel Duarte](https://www.figma.com/@daniel2d)
 
-Professor Diego Fernandez [Diego Fernandez](https://github.com/diego3g)
+Professor [Diego Fernandez](https://github.com/diego3g)
 
 <br />
 
 Deploy da aplicação 🚀 [Page](https://test-react-nadiduno.vercel.app/) 
+
+By DevRel <💜 /> [Nadi Duno](https://www.linkedin.com/in/nadiduno/) © 2023
