@@ -23,8 +23,8 @@ export const HeaderContainer = styled.header`
       &:hover {
         border-bottom: 3px solid ${(props) => props.theme['pastel-200']};
       }
-      &.active{
-        color:{(props) => props.theme['pastel-200']};
+      &.active {
+        color: ${(props) => props.theme['pastel-200']};
       }
     }
   }
