@@ -40,12 +40,12 @@ $ npm run dev
 
 ### No BootCamp
 
-[Rocketseat](https://www.rocketseat.com.br/) | Design [Figma](https://www.figma.com/file/FnCX310DgPWQBwrNtGb4X1/Ignite-Timer-(Community)?node-id=313%3A1874&t=i9oqxtMKrJxTi29V-0) --> [Daniel Duarte](https://www.figma.com/@daniel2d)
+🚀 [Rocketseat](https://www.rocketseat.com.br/) | Design [Figma](https://www.figma.com/file/FnCX310DgPWQBwrNtGb4X1/Ignite-Timer-(Community)?node-id=313%3A1874&t=i9oqxtMKrJxTi29V-0) --> [Daniel Duarte](https://www.figma.com/@daniel2d)
 
 Professor [Diego Fernandez](https://github.com/diego3g)
 
 <br />
 
-Deploy da aplicação 🚀 [Page](https://test-react-nadiduno.vercel.app/) 
+Deploy da aplicação 💻 [Page](https://timerpomodoro-nadiduno.vercel.app/) 
 
 By DevRel <💜 /> [Nadi Duno](https://www.linkedin.com/in/nadiduno/) © 2023
