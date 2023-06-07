@@ -8,7 +8,7 @@ export function Header() {
     <HeaderContainer>
       <img
         src={logopomodoro}
-        alt="Logo Pomodoro, é um imahem que diz Pomodoro com um tomate no meio nas cores azul e rosa"
+        alt="Logo Pomodoro, é um imagem que diz Pomodoro com um tomate no meio nas cores azul e rosa"
         title="Logo Pomodoro"
       />
       <nav>
