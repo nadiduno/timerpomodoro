@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body{
     background: ${(props) => props.theme['gray-800']};
-    color: ${(props) => props.theme['gray-800']};
+    color: ${(props) => props.theme['gray-300']};
   }
   body, input, textarea,button{
     font-family: 'Roboto', sans-serif;
