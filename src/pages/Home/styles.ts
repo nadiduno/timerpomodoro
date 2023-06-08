@@ -23,6 +23,35 @@ export const FormContainer = styled.div`
   font-weight: bold;
   flex-wrap: wrap;
 `
+const BaseInput = styled.input`
+  background: transparent;
+  height: 2.5rem;
+  border: 0;
+  border-bottom: 2px solid ${(props) => props.theme['gray-500']};
+  font-weight: bold;
+  font-size: 1.125rem;
+  padding: 0 0.5rem;
+  color: ${(props) => props.theme['gray-300']};
+  &:focus {
+    box-shadow: none;
+    border-color: ${(props) => props.theme['pastel-700']};
+  }
+  &::placeholder {
+    color: ${(props) => props.theme['gray-500']};
+  }
+`
+
+export const TaskInput = styled(BaseInput)`
+  flex: 1;
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
+`
+
+export const MinuteAmountInput = styled(BaseInput)`
+  width: 4rem;
+`
+
 export const CountdownContainer = styled.main`
   font-family: 'Roboto Mono', monospace;
   font-size: 10rem;
