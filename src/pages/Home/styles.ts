@@ -18,7 +18,7 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: ${(props) => props.theme['gray-100']};
+  color: ${(props) => props.theme['gray-500']};
   font-size: 1.125rem;
   font-weight: bold;
   flex-wrap: wrap;
@@ -32,7 +32,7 @@ export const CountdownContainer = styled.main`
   gap: 1rem;
   span {
     background: ${(props) => props.theme['gray-700']};
-    padding: 2rem 1 rem;
+    padding: 2rem 1rem;
     border-radius: 8px;
   }
 `
