@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { HistoryContainer, HistoryList, Status } from "./styles";
 
 export function History() {

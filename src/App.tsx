@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { ThemeProvider } from 'styled-components'
 import { BrowserRouter } from 'react-router-dom'
 import { GlobalStyle } from './styles/global'
