@@ -52,10 +52,12 @@ export function Home() {
   useEffect(() => {
     if (activeCycle) {
       setInterval(() => {
-        setAmountSecondsPassed(differenceInSeconds(new date(),activeCycle.starDate))
+        setAmountSecondsPassed(
+          differenceInSeconds(new Date(),activeCycle.starDate),
+        )
       }, 1000)
     }
-  },[])
+  },[activeCycle])
 
   function handleCreateNewCycle(data: NewCycleFormData) {
     const id = String(new Date().getTime())
