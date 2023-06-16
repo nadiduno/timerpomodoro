@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { Play } from 'phosphor-react'
+import { HandPalm, Play } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
@@ -13,6 +13,7 @@ import {
   MinuteAmountInput,
   Separator,
   StarCountdownButton,
+  StopCountdownButton,
   TaskInput,
 } from './styles'
 
@@ -71,7 +72,7 @@ export function Home() {
       task: data.task,
       minutesAmount: data.minutesAmount,
       starDate: new Date(),
-    }
+    } 
     
     setCycles((state) => [...state, newCycle])
     setactiveCycleId(id)
@@ -106,6 +107,7 @@ export function Home() {
             id="task" 
             list="task-suggestions" 
             placeholder="Dê um nome para o seu projeto"
+            disabled={!!activeCycle}
             {...register('task')}
           />
           <datalist id="task-suggestions">
@@ -121,6 +123,7 @@ export function Home() {
             step={5}
             min={5}
             max={60}
+            disabled={!!activeCycle}
             {...register('minutesAmount', { valueAsNumber: true })}
           />
           <span>minutos</span>
@@ -134,10 +137,17 @@ export function Home() {
           <span>{seconds[1]}</span>
         </CountdownContainer>
 
-        <StarCountdownButton disabled={isSubmitDisabled} type="submit">
-          <Play size={24} />
-          Començar
-        </StarCountdownButton>
+        { activeCycle ? (
+          <StopCountdownButton disabled={isSubmitDisabled} type="submit">
+            <HandPalm size={24} />
+            Interromper
+          </StopCountdownButton>
+        ) : (
+          <StarCountdownButton disabled={isSubmitDisabled} type="submit">
+            <Play size={24} />
+            Començar
+          </StarCountdownButton>
+        ) } 
       </form>
     </HomeContainer>
   )
