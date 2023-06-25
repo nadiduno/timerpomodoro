@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { HeaderContainer } from './styles'
 import logopomodoro from '../../assets/logopomodoro.svg'
 import { Timer, Scroll } from 'phosphor-react'
