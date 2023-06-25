@@ -15,7 +15,7 @@ Linguagem TypeScript como base.
 <div>
   <img 
     alt="Timer Pomodoro"
-    src="https://github.com/nadiduno/timerpomodoro/blob/main/.github/ProjectNadiDunoDesenvolvedorFrontEnd.png" 
+    src="https://github.com/nadiduno/timerpomodoro/blob/main/.github/ImgApp.png" 
     width="60%"
   >
   <br />
@@ -46,6 +46,6 @@ Professor [Diego Fernandez](https://github.com/diego3g)
 
 <br />
 
-Deploy da aplicação 💻 [Page](https://timerpomodoro-nadiduno.vercel.app/) 
+Deploy da aplicação 💻 [Timer Pomodoro](https://timerpomodoro-nadiduno.vercel.app/) 
 
 By DevRel <💜 /> [Nadi Duno](https://www.linkedin.com/in/nadiduno/) © 2023
