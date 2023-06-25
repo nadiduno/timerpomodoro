@@ -33,13 +33,11 @@ interface Cycle {
   task: string
   minutesAmount: number
   starDate: Date
-  interruptedDate?: Date
-  finishedDate?: Date
 }
 
 export function Home() {
   const [cycles,setCycles] = useState<Cycle[]>([])
-  const[activeCycleId,setActiveCycleId] = useState<string | null>(null)
+  const[activeCycleId,setactiveCycleId] = useState<string | null>(null)
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(0)
 
   const {register, handleSubmit, watch, reset} = useForm<NewCycleFormData>({
@@ -51,35 +49,20 @@ export function Home() {
   })
   
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
-  const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0  
 
   useEffect(() => {
     let interval: number
     if (activeCycle) {
       interval = setInterval(() => {
-        const secondsDiference = differenceInSeconds(new Date(),activeCycle.starDate);
-        if (secondsDiference >= totalSeconds){
-          setCycles(state => 
-            state.map((cycle => {
-            if (cycle.id === activeCycleId) {
-              return {...cycle, finishedDate: new Date() }
-            } else {
-              return cycle
-            }
-            })),
-          )  
-          setAmountSecondsPassed(totalSeconds)
-          clearInterval(interval)
-        } else {
-          setAmountSecondsPassed(secondsDiference)
-        }
-        
+        setAmountSecondsPassed(
+          differenceInSeconds(new Date(),activeCycle.starDate),
+        )
       }, 1000)
     }
     return () => {
       clearInterval(interval)
     }
-  },[activeCycle, totalSeconds, activeCycleId])
+  },[activeCycle])
 
   function handleCreateNewCycle(data: NewCycleFormData) {
     const id = String(new Date().getTime())
@@ -92,26 +75,12 @@ export function Home() {
     } 
     
     setCycles((state) => [...state, newCycle])
-    setActiveCycleId(id)
+    setactiveCycleId(id)
     setAmountSecondsPassed(0)
     reset()
   }
-
-  
-  function handleInterruptionCycle(){
-    setCycles(state => 
-      state.map((cycle => {
-      if (cycle.id === activeCycleId) {
-        return {...cycle, interruptedDate: new Date() }
-      } else {
-        return cycle
-      }
-      })),
-    )
-    setActiveCycleId(null)
-  }
    
-  
+  const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0  
   const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0
   
   const minutesAmount = Math.floor(currentSeconds / 60)
@@ -125,7 +94,6 @@ export function Home() {
       document.title = `${minutes}:${seconds}`
     }
   },[minutes,seconds,activeCycle])
-  
   const task = watch('task')
 
   const isSubmitDisabled = !task 
@@ -170,7 +138,7 @@ export function Home() {
         </CountdownContainer>
 
         { activeCycle ? (
-          <StopCountdownButton onClick={handleInterruptionCycle} type="submit">
+          <StopCountdownButton disabled={isSubmitDisabled} type="submit">
             <HandPalm size={24} />
             Interromper
           </StopCountdownButton>
