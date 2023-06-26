@@ -16,7 +16,7 @@ interface Cycle {
   }
   
 interface CyclesContextType {
-    cycles: Cycles[]
+    cycles: Cycle[]
     activeCycle: Cycle | undefined
     activeCycleId: string | null
     amountSecondsPassed: number
@@ -32,7 +32,9 @@ interface CyclesContextProvideProps{
 
 export const CyclesContext = createContext({} as CyclesContextType)
 
-export function CyclesContextProvider({ children }: CyclesContextProvideProps){
+export function CyclesContextProvider({ 
+  children,
+}: CyclesContextProvideProps){
     const [cycles,setCycles] = useState<Cycle[]>([])
     const[activeCycleId,setactiveCycleId] = useState<string | null>(null)
     const [amountSecondsPassed, setAmountSecondsPassed] = useState(0)
@@ -66,7 +68,6 @@ export function CyclesContextProvider({ children }: CyclesContextProvideProps){
         setCycles((state) => [...state, newCycle])
         setactiveCycleId(id)
         setAmountSecondsPassed(0)
-        // reset()
       }
       
       function interruptCurrentCycle(){
