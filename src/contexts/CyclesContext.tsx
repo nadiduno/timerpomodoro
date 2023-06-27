@@ -54,35 +54,36 @@ export function CyclesContextProvider({
               return cycle
           }),
       )
-      }
-      function createNewCycle(data: CretateCycleData) {
-        const id = String(new Date().getTime())
-        
-        const newCycle: Cycle = {
-          id,
-          task: data.task,
-          minutesAmount: data.minutesAmount,
-          starDate: new Date(),
-        } 
-        
-        setCycles((state) => [...state, newCycle])
-        setactiveCycleId(id)
-        setAmountSecondsPassed(0)
-      }
+      setactiveCycleId(null)
+    }
+    function createNewCycle(data: CretateCycleData) {
+      const id = String(new Date().getTime())
       
-      function interruptCurrentCycle(){
-        setCycles( (state) =>
-          state.map((cycle) => {
-            if (cycle.id === activeCycleId) {
-              return {...cycle, interruptedDate: new Date()}
-            }
-            else
-              return cycle
-          }),
-        )
-        setactiveCycleId(null)
-      }
-        
+      const newCycle: Cycle = {
+        id,
+        task: data.task,
+        minutesAmount: data.minutesAmount,
+        starDate: new Date(),
+      } 
+      
+      setCycles((state) => [...state, newCycle])
+      setactiveCycleId(id)
+      setAmountSecondsPassed(0)
+    }
+      
+    function interruptCurrentCycle(){
+      setCycles( (state) =>
+        state.map((cycle) => {
+          if (cycle.id === activeCycleId) {
+            return {...cycle, interruptedDate: new Date()}
+          }
+          else
+            return cycle
+        }),
+      )
+      setactiveCycleId(null)
+    }
+      
 
     return(
         <CyclesContext.Provider 
