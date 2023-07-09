@@ -21,8 +21,6 @@ Linguagem TypeScript como base.
   <br />
 </div>
 
-</div>
-
 ![Tech](https://img.shields.io/badge/%3C%2F%3E-tech-lightgrey)<br/>
 [Typescript](https://www.typescriptlang.org/) | [ReactJS](https://reactjs.org/)| [Vite](https://vitejs.dev/) | [Node.js](https://nodejs.org/en/download/) | [NPM](https://www.npmjs.com/)
 
